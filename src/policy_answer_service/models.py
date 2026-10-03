@@ -1,0 +1,21 @@
+"""
+Pydantic request/response models for the /ask endpoint.
+"""
+
+from pydantic import BaseModel
+
+
+class UserRequest(BaseModel):
+    question: str
+
+
+class Citation(BaseModel):
+    chunk_id: str
+    document_title: str
+
+
+class ModelResponse(BaseModel):
+    answer: str
+    citations: list[Citation]
+    confidence: float
+    answerable: bool  # False for the "not in the policies" case

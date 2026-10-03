@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Env / secrets
+.env
+
+# Data artifacts (keep the synthetic docs themselves, ignore generated caches/indexes)
+data/embedding_cache.sqlite
+data/*.index
+*.db
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
