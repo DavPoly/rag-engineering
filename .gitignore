@@ -14,6 +14,7 @@ htmlcov/
 # Data artifacts (keep the synthetic docs themselves, ignore generated caches/indexes)
 data/embedding_cache.sqlite
 data/*.index
+data/*.jsonl
 *.db
 
 # OS / editor
