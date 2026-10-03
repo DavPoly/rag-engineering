@@ -2,7 +2,7 @@
 title: "Payment Refund Processing"
 category: payments
 effective_date: 2025-06-01
-version: 1.0
+version: "1.0"
 ---
 
 # Payment Refund Processing

@@ -2,7 +2,7 @@
 title: "Extended Warranty Plans"
 category: warranty
 effective_date: 2024-07-01
-version: 1.4
+version: "1.4"
 ---
 
 # Extended Warranty Plans

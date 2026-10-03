@@ -2,7 +2,7 @@
 title: "Shipping Delays and Lost Parcels"
 category: shipping
 effective_date: 2025-02-01
-version: 1.0
+version: "1.0"
 ---
 
 # Shipping Delays and Lost Parcels

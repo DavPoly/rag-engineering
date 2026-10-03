@@ -2,7 +2,7 @@
 title: "Warranty Coverage by Product Code"
 category: warranty
 effective_date: 2025-05-01
-version: 3.0
+version: "3.0"
 ---
 
 # Warranty Coverage by Product Code

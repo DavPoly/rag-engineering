@@ -2,7 +2,7 @@
 title: "Returns Policy v1"
 category: returns
 effective_date: 2023-02-01
-version: 1.0
+version: "1.0"
 ---
 
 # Returns Policy

@@ -2,7 +2,7 @@
 title: "Transit Damage Claims Procedure"
 category: damaged-items
 effective_date: 2025-01-20
-version: 1.3
+version: "1.3"
 ---
 
 # Transit Damage Claims Procedure

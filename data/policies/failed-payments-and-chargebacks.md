@@ -2,7 +2,7 @@
 title: "Failed Payments and Chargebacks"
 category: payments
 effective_date: 2025-03-01
-version: 1.0
+version: "1.0"
 ---
 
 # Failed Payments and Chargebacks

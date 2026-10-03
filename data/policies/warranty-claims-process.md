@@ -2,7 +2,7 @@
 title: "Warranty Claims Process"
 category: warranty
 effective_date: 2025-02-15
-version: 2.0
+version: "2.0"
 ---
 
 # Warranty Claims Process

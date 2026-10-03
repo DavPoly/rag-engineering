@@ -2,7 +2,7 @@
 title: "Accepted Payment Methods"
 category: payments
 effective_date: 2024-12-01
-version: 1.1
+version: "1.1"
 ---
 
 # Accepted Payment Methods

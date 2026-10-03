@@ -2,7 +2,7 @@
 title: "Standard and Express Shipping Policy"
 category: shipping
 effective_date: 2024-09-01
-version: 2.1
+version: "2.1"
 ---
 
 # Standard and Express Shipping Policy

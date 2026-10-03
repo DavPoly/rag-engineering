@@ -2,7 +2,7 @@
 title: "Return Shipping and Refund Timelines"
 category: returns
 effective_date: 2025-06-01
-version: 1.0
+version: "1.0"
 ---
 
 # Return Shipping and Refund Timelines

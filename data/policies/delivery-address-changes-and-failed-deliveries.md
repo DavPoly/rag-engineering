@@ -2,7 +2,7 @@
 title: "Delivery Address Changes and Failed Deliveries"
 category: shipping
 effective_date: 2025-03-10
-version: 1.0
+version: "1.0"
 ---
 
 # Delivery Address Changes and Failed Deliveries

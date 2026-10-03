@@ -2,7 +2,7 @@
 title: "Damaged on Arrival Policy"
 category: damaged-items
 effective_date: 2024-10-01
-version: 1.0
+version: "1.0"
 ---
 
 # Damaged on Arrival Policy

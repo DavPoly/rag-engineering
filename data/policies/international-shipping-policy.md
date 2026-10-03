@@ -2,7 +2,7 @@
 title: "International Shipping Policy"
 category: shipping
 effective_date: 2024-11-15
-version: 1.2
+version: "1.2"
 ---
 
 # International Shipping Policy

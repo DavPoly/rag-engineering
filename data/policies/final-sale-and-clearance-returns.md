@@ -2,7 +2,7 @@
 title: "Final Sale and Clearance Returns"
 category: returns
 effective_date: 2025-06-01
-version: 1.0
+version: "1.0"
 ---
 
 # Final Sale and Clearance Returns

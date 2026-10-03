@@ -2,7 +2,7 @@
 title: "Points Expiry and Redemption Rules"
 category: loyalty
 effective_date: 2025-07-01
-version: 1.0
+version: "1.0"
 ---
 
 # Points Expiry and Redemption Rules

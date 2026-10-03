@@ -2,7 +2,7 @@
 title: "Northwind Rewards Points Policy"
 category: loyalty
 effective_date: 2024-04-01
-version: 2.0
+version: "2.0"
 ---
 
 # Northwind Rewards Points Policy

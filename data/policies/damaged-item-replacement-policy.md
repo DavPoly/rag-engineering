@@ -2,7 +2,7 @@
 title: "Damaged Item Replacement Policy"
 category: damaged-items
 effective_date: 2025-04-01
-version: 1.0
+version: "1.0"
 ---
 
 # Damaged Item Replacement Policy
