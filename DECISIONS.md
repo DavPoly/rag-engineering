@@ -30,10 +30,34 @@ Format per entry:
 
 ## TODO — Where to stop on the retrieval ladder
 
-**Decision:**
+**Decision:** Ship Vector search alone as the primary retriever. Reject
+Hybrid (RRF-fused) and both reranked variants for production use.
+
 **Alternatives considered:**
-**Why:**
-**Evidence:**
+- Hybrid (BM25 + Vector via RRF): rejected — underperformed Vector alone
+  on both recall@5 (0.48 vs 0.80) and MRR (0.32 vs 0.49). Regression
+  analysis showed BM25 misses the correct chunk entirely on most
+  natural-language queries, and RRF rewards chunks both retrievers
+  weakly agree on over chunks Vector alone ranks highly — "mutual
+  mediocrity" beating one strong signal.
+- Vector + reranker: recall@5 0.88, MRR 0.61 vs Vector alone's 0.80/0.49
+  — a real quality gain, but at 310ms vs 36ms (8.6x latency). Rejected
+  for the live /ask endpoint; would reconsider for an offline/batch
+  review workflow where latency doesn't block a human in real time.
+- Hybrid + reranker: performs ~identically to Vector + reranker
+  (0.88/0.57/319ms), confirming BM25 adds no value here even after
+  reranking cleans up its noise.
+
+**Why:** The endpoint serves a live support-agent chat flow; latency
+degrades the interaction more than the marginal recall gain improves it
+at this stage. BM25's actual strength (exact product codes) isn't
+reflected in this golden set's natural-language phrasing — see note
+below on routing.
+
+**Evidence:** query volume on exact product codes grows meaningfully
+(route those to BM25 specifically, not via RRF blending), or if the
+/ask endpoint moves to an async/reviewed workflow where latency budget
+loosens.
 
 ---
 
