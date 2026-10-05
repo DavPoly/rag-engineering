@@ -13,6 +13,7 @@ htmlcov/
 
 # Data artifacts (keep the synthetic docs themselves, ignore generated caches/indexes)
 data/embedding_cache.sqlite
+data/embedding_cache/
 data/*.index
 data/*.jsonl
 *.db

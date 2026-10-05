@@ -6,6 +6,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
+
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(
         env_file=".env",
@@ -17,12 +18,12 @@ class Settings(BaseSettings):
     policy_docs_dir: Path = PROJECT_ROOT / "data" / "policies"
     golden_set_path: Path = PROJECT_ROOT / "evals" / "golden_set.jsonl"
     embedding_cache_path: Path = PROJECT_ROOT / "data" / "embedding_cache.sqlite"
-    
+
     chunk_size_tokens: int = 300
     chunk_overlap_tokens: int = 50
     retrieval_top_k: int = 5
 
-    embedding_model_name: str = "sentence-transformers/all-MiniLM-L6-v2"
+    embedding_model_api: str = "nvidia/llama-nemotron-embed-vl-1b-v2:free"
 
     llm_provider: str = Field(default="openrouter", description="e.g. 'openrouter'")
     llm_base_url: str = Field(default="https://openrouter.ai/api/v1")
@@ -31,6 +32,7 @@ class Settings(BaseSettings):
 
     app_env: str = Field(default="dev", alias="APP_ENV")
     log_level: str = "INFO"
+
 
 @lru_cache
 def get_settings() -> Settings:

@@ -11,7 +11,7 @@ See README.md for architecture and DECISIONS.md for the reasoning trail.
 - Python 3.11+, managed with `uv`
 - FastAPI + Pydantic v2 for the service layer
 - pytest for tests (mocked LLM/embedding calls in unit tests)
-- rank-bm25 for keyword retrieval, sentence-transformers for dense retrieval
+- rank-bm25 for keyword retrieval, OpenRouter embeddings for dense retrieval
 - OpenRouter (via the `openai` client, pointed at a different base_url) for LLM calls
 - ruff for lint/format
 
