@@ -54,7 +54,16 @@ at this stage. BM25's actual strength (exact product codes) isn't
 reflected in this golden set's natural-language phrasing — see note
 below on routing.
 
-**Evidence:** query volume on exact product codes grows meaningfully
+**Evidence:** Measured 2026-10-05 on the 25 answerable and multi-doc
+golden questions, with the `liquid/lfm-2.5-embedding-350m:free` embedding
+model. Recall@5 / MRR: BM25 0.28 / 0.21; vector 0.88 / 0.68; hybrid (RRF)
+0.52 / 0.30. Vector alone is best on both metrics, so hybrid stays
+rejected. Latency was not measured in this run, because the eval timed
+precomputed queries. The vector misses are q04, q10, and q25, and all
+three also degraded answer quality in the faithfulness run. The reranker
+numbers above came from the MiniLM model and are not comparable to these.
+
+Revisit when query volume on exact product codes grows meaningfully
 (route those to BM25 specifically, not via RRF blending), or if the
 /ask endpoint moves to an async/reviewed workflow where latency budget
 loosens.

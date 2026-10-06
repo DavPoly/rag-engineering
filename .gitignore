@@ -14,6 +14,9 @@ htmlcov/
 # Data artifacts (keep the synthetic docs themselves, ignore generated caches/indexes)
 data/embedding_cache.sqlite
 data/embedding_cache/
+
+# Eval run outputs (generated; keep out of history)
+evals/results/
 data/*.index
 data/*.jsonl
 *.db
