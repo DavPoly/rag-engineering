@@ -2,11 +2,11 @@
 Pydantic request/response models for the /ask endpoint.
 """
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class UserRequest(BaseModel):
-    question: str
+    question: str = Field(min_length=1)
 
 
 class Citation(BaseModel):
@@ -20,8 +20,9 @@ class ModelResponse(BaseModel):
     confidence: float
     answerable: bool  # False for the "not in the policies" case
 
+
 class Chunk(BaseModel):
-    chunk_id: str          # e.g. "returns-policy-v2#eligibility"
+    chunk_id: str  # e.g. "returns-policy-v2#eligibility"
     document_title: str
     section: str
     text: str

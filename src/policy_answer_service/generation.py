@@ -42,6 +42,10 @@ Do not reward extra detail that is consistent with the reference, and do not pen
 Respond with JSON only: {"score": number from 0 to 1}."""
 
 
+class ModelReplyError(ValueError):
+    """The model's reply could not be parsed as the JSON we asked for."""
+
+
 def build_client() -> OpenAI:
     settings = get_settings()
     return OpenAI(base_url=settings.llm_base_url, api_key=settings.llm_api_key)
@@ -93,7 +97,9 @@ def _parse_json_reply(completion) -> dict:
         except json.JSONDecodeError:
             pass
     finish_reason = completion.choices[0].finish_reason
-    raise ValueError(f"Model reply was not JSON (finish_reason={finish_reason}): {content[:300]!r}")
+    raise ModelReplyError(
+        f"Model reply was not JSON (finish_reason={finish_reason}): {content[:300]!r}"
+    )
 
 
 def generate_answer(client: OpenAI, model: str, question: str, chunks: list[dict]) -> ModelResponse:

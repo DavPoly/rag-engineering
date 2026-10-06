@@ -67,17 +67,3 @@ Revisit when query volume on exact product codes grows meaningfully
 (route those to BM25 specifically, not via RRF blending), or if the
 /ask endpoint moves to an async/reviewed workflow where latency budget
 loosens.
-
----
-
-## TODO — Handling the version-conflict policy documents
-
-**Decision:**
-**Alternatives considered:**
-**Why:**
-**Evidence:**
-
----
-
-<!-- Add more entries as they come up — embedding model choice, the
-     response schema shape, anything you reversed your mind on. -->
