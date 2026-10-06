@@ -27,7 +27,7 @@ class Settings(BaseSettings):
 
     llm_provider: str = Field(default="openrouter", description="e.g. 'openrouter'")
     llm_base_url: str = Field(default="https://openrouter.ai/api/v1")
-    llm_model: str = "anthropic/claude-sonnet-4.6"
+    llm_model: str = "xiaomi/mimo-v2.6-pro"
     llm_api_key: str = Field(default="", alias="OPENROUTER_API_KEY")
 
     app_env: str = Field(default="dev", alias="APP_ENV")
